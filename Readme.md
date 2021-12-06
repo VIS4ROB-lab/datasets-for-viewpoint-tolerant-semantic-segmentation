@@ -2,7 +2,7 @@
 
 ## Description
 
-This Readme.md will introduce the training and test datasets used in the paper "Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics". Pleas follow this [link](https://drive.google.com/drive/folders/1nPrOjodKeOEPm9Dvwt7ekm2NHuoDxGBF?usp=sharing) to download the ziped dataset bags. All the datasets are given in the rosbags and collected from the custom-made OpenGL-based drone simulator. 
+This Readme.md will introduce the training and test datasets used in the paper "Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics". Please follow this [link](https://drive.google.com/drive/folders/1nPrOjodKeOEPm9Dvwt7ekm2NHuoDxGBF?usp=sharing) to download the zipped dataset bags. All the datasets are given in the rosbags and collected from the custom-made OpenGL-based drone simulator. 
 
 Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house garden** and **skyscrapres**. The technical details will be given in the `Dataset` part. Each model contains respectively training dataset, named `circle`, and test datasets, named `star`. Please refer the original paper for the detailed sampling approach. Data is sampled at different viewpoints above the model and at each viewpoint 4 different kinds of information are collected:
 + rgb image, in ros topic `/fireflyvrglasses_for_robots_ros/color_map`, `.png` format with resolution of `480x752`
