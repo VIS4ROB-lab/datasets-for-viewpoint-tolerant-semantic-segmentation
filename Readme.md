@@ -13,7 +13,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 ## Semantic Class Definition
 | Class          | Palette                                                             |             Color Example             | Description                                                                                  |
 |----------------|---------------------------------------------------------------------|:-------------------------------------:|----------------------------------------------------------------------------------------------|
-| **Pavement**   | <div style="width: 170pt"> RGB: (81, 0, 81)<br/>HEX: #510051 </div> |  ![](./resources/color_pavement.png)  | Man-made flat ground, asphalt, sidewalk, which are easy to traverse by all wheeled vehicles. |
+| **Pavement**   | <div style="width: 200pt"> RGB: (81, 0, 81)<br/>HEX: #510051 </div> |  ![](./resources/color_pavement.png)  | Man-made flat ground, asphalt, sidewalk, which are easy to traverse by all wheeled vehicles. |
 | **Terrian**    | RGB: (152, 251, 152)<br/>HEX: #98FB98                               |  ![](./resources/color_terrian.png)   | Bare terrain, grass fields, mud, which can be traversed by off-road wheeled vehicles.        |
 | **Water**      | RGB: (150, 170, 250)<br/>HEX: #96AAFA                               |   ![](./resources/color_water.png)    | Lake, sea, rivers, swimming pool and so on.                                                  |
 | **Sky**        | RGB: (70, 130, 180)<br/>HEX: #4682B4                                |    ![](./resources/color_sky.png)     | Sky.                                                                                         |
