@@ -5,33 +5,24 @@
 This Readme.md will introduce the training and test datasets used in the paper "Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics". Pleas follow this [link](https://drive.google.com/drive/folders/1nPrOjodKeOEPm9Dvwt7ekm2NHuoDxGBF?usp=sharing) to download the ziped dataset bags. All the datasets are given in the rosbags and collected from the custom-made OpenGL-based drone simulator. 
 
 Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house garden** and **skyscrapres**. The technical details will be given in the `Dataset` part. Each model contains respectively training dataset, named `circle`, and test datasets, named `star`. Please refer the original paper for the detailed sampling approach. Data is sampled at different viewpoints above the model and at each viewpoint 4 different kinds of information are collected:
-+ rgb image, in ros topic `/fireflyvrglasses_for_robots_ros/color_map`, `png` format with resolution of `480x752`
-+ semantic annotation, in ros topic `/firefly/vrglasses_for_robots_ros/semantic_map`, `png` format with resolution of `480x752`
-+ depth information, in ros topic `/firefly/vrglasses_for_robots_ros/depth_map `, `exr` format with resolution of `480x752`
-+ camera position information, in ros topic `/firefly/vrglasses_for_robots_ros/camera_odometry_out`, `csv` format, contains timestamp, positions (`x`,`y`,`z`) and orientations (`x`,`y`,`z`, `w`)
++ rgb image, in ros topic `/fireflyvrglasses_for_robots_ros/color_map`, `.png` format with resolution of `480x752`
++ semantic annotation, in ros topic `/firefly/vrglasses_for_robots_ros/semantic_map`, `.png` format with resolution of `480x752`
++ depth information, in ros topic `/firefly/vrglasses_for_robots_ros/depth_map `, `.exr` format with resolution of `480x752`
++ camera position information, in ros topic `/firefly/vrglasses_for_robots_ros/camera_odometry_out`, `.csv` format, contains timestamp, positions (`x`,`y`,`z`) and orientations (`x`,`y`,`z`, `w`)
 
 ## Semantic Class Definition
-
-+ <table><tr><td bgcolor=#510051 width="160" height="30" > <b>Pavement <br>(81,0,81) </b> </td> <td>Man-made flat ground, asphalt, sidewalk, which are easy to traverse by all wheeled vehicles; </td></tr></table>  
-
-+ <table><tr><td bgcolor=#98fb98 width="160" height="30"> <b>Terrian <br>(152,251,152) </b> </td> <td>Bare terrain, grass fields, mud, which can be traversed by off-road wheeled vehicles; </td></tr></table> 
-+ <table><tr><td bgcolor=#96aafa width="160" height="30"> <b>Water <br>(150,170,250) </b> </td> <td> Lake, sea, rivers, swimming pool and so on; </td></tr></table> 
-
-+ <table><tr><td bgcolor=#4682b4 width="160" height="30"> <b>Sky <br>(70,130,180) </b> </td> <td> Sky; </td></tr></table> 
-
-+ <table><tr><td bgcolor=#464646 width="160" height="30"> <b>Building <br>(70,70,70) </b> </td> <td> All types of edification, including the windows, doors, and rooftops; </td></tr></table> 
-
-
-+ <table><tr><td bgcolor=#6a8e23 width="160" height="30"> <b>Vegetation <br>(107,142,35) </b> </td> <td> Trees, bushes, plants, which are not easy to traverse by any wheeled vehicle; </td></tr></table> 
-
-+ <table><tr><td bgcolor=#dc143c width="160" height="30"> <b>Person <br>(220, 20, 60) </b> </td> <td> All the people without transportation, such as pedestrians; </td></tr></table> 
-
-+ <table><tr><td bgcolor=#ff000 width="160" height="30"> <b>Rider <br>(255, 0, 0) </b> </td> <td> All the people without transportation, such as pedestrians; </td></tr></table> 
-
-+ <table><tr><td bgcolor=#0008e width="160" height="30"> <b>Vehicle <br>(0, 0, 142) </b> </td> <td> Car, truck, train, boat, and so on; </td></tr></table> 
-
-+ <table><tr><td bgcolor=#00000 width="160" height="30"> <b>Others & Unlabeled <br> (0, 0, 0) </b> </td> <td> Elements that do not fit any other class or areas without a model, such as trash bins, background, or failures on the model. </td></tr></table> 
-
+| Class          | Palette                              |             Color Example             | Description                                                                                  |
+|----------------|--------------------------------------|:-------------------------------------:|----------------------------------------------------------------------------------------------|
+| **Pavement**   | RGB: (81, 0, 81)<br/>HEX: #510051    |  ![](./resources/color_pavement.png)  | Man-made flat ground, asphalt, sidewalk, which are easy to traverse by all wheeled vehicles. |
+| **Terrian**    | RGB: (152, 251, 152)<br/>HEX: #98FB98 |  ![](./resources/color_terrian.png)   | Bare terrain, grass fields, mud, which can be traversed by off-road wheeled vehicles.        |
+| **Water**      | RGB: (150, 170, 250)<br/>HEX: #96AAFA |   ![](./resources/color_water.png)    | Lake, sea, rivers, swimming pool and so on.                                                  |
+| **Sky**        | RGB: (70, 130, 180)<br/>HEX: #4682B4 |    ![](./resources/color_sky.png)     | Sky.                                                                                         |
+| **Building**   | RGB: (70, 70, 70)<br/>HEX: #464646   |  ![](./resources/color_building.png)  | All types of edification, including the windows, doors, and rooftops.                        |
+| **Vegetation** | RGB: (107, 142, 35)<br/>HEX: #6A8E23 | ![](./resources/color_vegetation.png) | Trees, bushes, plants, which are not easy to traverse by any wheeled vehicle.                |
+| **Person**     | RGB: (220,20,60)<br/>HEX: #DC143C    |   ![](./resources/color_person.png)   | Pedestrians.                                                                                 |
+| **Rider**      | RGB: (255,0,0)<br/>HEX: #FF000       |   ![](./resources/color_riders.png)   | Bicyclists and motorcyclists                                                                 |
+| **Vehicle**    | RGB: (0,0,142)<br/>HEX: #0008E       |  ![](./resources/color_vehicle.png)   | Car, truck, train, boat and so on.                                                           |
+| **Others & Unlabeled**    | RGB: (0,0,0)<br/>HEX: #00000         |   ![](./resources/color_others.png)   | Elements that do not fit any other class or areas without a model, such as trash bins, background, or failures on the model.   |
 
 ## Dataset
 
@@ -46,7 +37,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
     * **sampling position**: height 90 m, pitch angle -60°
     * **number of images**: 288
 + **star**:
-    * **number of images of each sub-dataset**: 432
+    * **number of images in each sub-dataset**: 432
 ### Warehouse
 
 <div style="text-align: center;">
@@ -58,7 +49,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
     * **sampling position**: height 40 m, pitch angle -60°
     * **number of images**: 216
 + **star**:
-    * **number of images of each sub-dataset**: 225
+    * **number of images in each sub-dataset**: 225
 
 ### Garden
 <div style="text-align: center;">
@@ -70,7 +61,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
     * **sampling position**: height 60 m, pitch angle -60°
     * **number of images**: 216
 + **star**:
-    * **number of images of each sub-dataset**: 225
+    * **number of images in each sub-dataset**: 225
 
 ### House Garden
 <div style="text-align: center;">
@@ -82,7 +73,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
     * **sampling position**: height 40 m, pitch angle -60°
     * **number of images**: 288
 + **star**:
-    * **number of images of each sub-dataset**: 225
+    * **number of images in each sub-dataset**: 225
   
 ### Skyscrapers
 
@@ -95,11 +86,11 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
     * **sampling position**: height 90 m, pitch angle -60°
     * **number of images**: 288
 + **star**:
-    * **number of images of each sub-dataset**: 480
+    * **number of images in each sub-dataset**: 480
 
 ## Usage
 
-extract data with `vi_bag_tools`
+extract data with [`vi_bag_tools`](https://github.com/VIS4ROB-lab/vi_bag_tools)
 
 ```sh
   $ roscore
