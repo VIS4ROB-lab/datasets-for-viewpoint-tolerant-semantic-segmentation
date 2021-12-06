@@ -11,18 +11,18 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 + camera position information, in ros topic `/firefly/vrglasses_for_robots_ros/camera_odometry_out`, `.csv` format, contains timestamp, positions (`x`,`y`,`z`) and orientations (`x`,`y`,`z`, `w`)
 
 ## Semantic Class Definition
-| Class          | Palette                                                             |             Color Example             | Description                                                                                  |
-|----------------|---------------------------------------------------------------------|:-------------------------------------:|----------------------------------------------------------------------------------------------|
-| **Pavement**   | <div style="width: 200pt"> RGB: (81, 0, 81)<br/>HEX: #510051 </div> |  ![](./resources/color_pavement.png)  | Man-made flat ground, asphalt, sidewalk, which are easy to traverse by all wheeled vehicles. |
-| **Terrian**    | RGB: (152, 251, 152)<br/>HEX: #98FB98                               |  ![](./resources/color_terrian.png)   | Bare terrain, grass fields, mud, which can be traversed by off-road wheeled vehicles.        |
-| **Water**      | RGB: (150, 170, 250)<br/>HEX: #96AAFA                               |   ![](./resources/color_water.png)    | Lake, sea, rivers, swimming pool and so on.                                                  |
-| **Sky**        | RGB: (70, 130, 180)<br/>HEX: #4682B4                                |    ![](./resources/color_sky.png)     | Sky.                                                                                         |
-| **Building**   | RGB: (70, 70, 70)<br/>HEX: #464646                                  |  ![](./resources/color_building.png)  | All types of edification, including the windows, doors, and rooftops.                        |
-| **Vegetation** | RGB: (107, 142, 35)<br/>HEX: #6A8E23                                | ![](./resources/color_vegetation.png) | Trees, bushes, plants, which are not easy to traverse by any wheeled vehicle.                |
-| **Person**     | RGB: (220,20,60)<br/>HEX: #DC143C                                   |   ![](./resources/color_person.png)   | Pedestrians.                                                                                 |
-| **Rider**      | RGB: (255,0,0)<br/>HEX: #FF000                                      |   ![](./resources/color_riders.png)   | Bicyclists and motorcyclists                                                                 |
-| **Vehicle**    | RGB: (0,0,142)<br/>HEX: #0008E                                      |  ![](./resources/color_vehicle.png)   | Car, truck, train, boat and so on.                                                           |
-| **Others & Unlabeled**    | RGB: (0,0,0)<br/>HEX: #00000                                        |   ![](./resources/color_others.png)   | Elements that do not fit any other class or areas without a model, such as trash bins, background, or failures on the model.   |
+| Class       | Palette                                                      |             Color Example             | Description                                                                                                                  |
+|-------------|--------------------------------------------------------------|:-------------------------------------:|------------------------------------------------------------------------------------------------------------------------------|
+| **Pavement** | RGB: (81, 0, 81)<br/>HEX: #510051  |  ![](./resources/color_pavement.png)  | Man-made flat ground, asphalt, sidewalk, which are easy to traverse by all wheeled vehicles.                                 |
+| **Terrian** | RGB: (152, 251, 152)<br/>HEX: #98FB98                        |  ![](./resources/color_terrian.png)   | Bare terrain, grass fields, mud, which can be traversed by off-road wheeled vehicles.                                        |
+| **Water**   | RGB: (150, 170, 250)<br/>HEX: #96AAFA                        |   ![](./resources/color_water.png)    | Lake, sea, rivers, swimming pool and so on.                                                                                  |
+| **Sky**     | RGB: (70, 130, 180)<br/>HEX: #4682B4                         |    ![](./resources/color_sky.png)     | Sky.                                                                                                                         |
+| **Building** | RGB: (70, 70, 70)<br/>HEX: #464646                           |  ![](./resources/color_building.png)  | All types of edification, including the windows, doors, and rooftops.                                                        |
+| **Vegetation** | RGB: (107, 142, 35)<br/>HEX: #6A8E23                         | ![](./resources/color_vegetation.png) | Trees, bushes, plants, which are not easy to traverse by any wheeled vehicle.                                                |
+| **Person**  | RGB: (220,20,60)<br/>HEX: #DC143C                            |   ![](./resources/color_person.png)   | Pedestrians.                                                                                                                 |
+| **Rider**   | RGB: (255,0,0)<br/>HEX: #FF000                               |   ![](./resources/color_riders.png)   | Bicyclists and motorcyclists.                                                                                                |
+| **Vehicle** | RGB: (0,0,142)<br/>HEX: #0008E                               |  ![](./resources/color_vehicle.png)   | Car, truck, train, boat and so on.                                                                                           |
+| **Others & Unlabeled** | RGB: (0,0,0)<br/>HEX: #00000                                 |   ![](./resources/color_others.png)   | Elements that do not fit any other class or areas without a model, such as trash bins, background, or failures on the model. |
 
 ## Dataset
 
