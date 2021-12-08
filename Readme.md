@@ -29,7 +29,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 ### Hospital
 
 <div style="text-align: center;">
-    <img src="https://drive.google.com/uc?id=1X7kRBN5lTNsEtw9z1VhVc_U-SF5UR5fP">
+    <img src="./resources/hospital_multiviews.png">
     Multi views of hospital model
 </div>
 
@@ -41,7 +41,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 ### Warehouse
 
 <div style="text-align: center;">
-    <img src="https://drive.google.com/uc?id=1vSMVKEo7ZhFNKdgQGiTckumZ4-PcH2p7">
+    <img src="./resources/warehouse_multiviews.png">
     Multi views of rehouse model
 </div>
 
@@ -53,7 +53,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 
 ### Garden
 <div style="text-align: center;">
-    <img src="https://drive.google.com/uc?id=1o0CPzvpYe893KeJeVG6Iax7IIRxDL7vU">
+    <img src="./resources/garden_of_eden_multiviews.png">
     Multi views of garden model
 </div>
 
@@ -65,7 +65,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 
 ### House Garden
 <div style="text-align: center;">
-    <img src="https://drive.google.com/uc?id=1f2bAvbpMNmRixs3PKreT_tpMspVrig8x">
+    <img src="./resources/house_garden_multiviews.png">
     Multi views of house garden model
 </div>
 
@@ -78,7 +78,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 ### Skyscrapers
 
 <div style="text-align: center;">
-    <img src="https://drive.google.com/uc?id=1Pm44d8o3x-6NfLAzPw2FYNMFdoa7Vvdi">
+    <img src="./resources/skyscrapers_multiview.png">
     Multi views of house garden model
 </div>
 
