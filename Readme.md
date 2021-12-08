@@ -1,10 +1,10 @@
-# Dataset rosbags for Viewpoint-tolerant Semantic Segmentation
+# Datasets for Viewpoint-tolerant Semantic Segmentation
 
 ## Description
 
-This Readme.md will introduce the training and test datasets used in the paper "Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics". Please follow this [link](https://drive.google.com/drive/folders/1nPrOjodKeOEPm9Dvwt7ekm2NHuoDxGBF?usp=sharing) to download the zipped dataset bags. All the datasets are given in the rosbags and collected from the custom-made OpenGL-based drone simulator. 
+This Readme.md will introduce the training and test datasets used in the paper "Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics". Please follow this [link](https://drive.google.com/drive/folders/1nPrOjodKeOEPm9Dvwt7ekm2NHuoDxGBF?usp=sharing) to download the zipped datasets. All the datasets are collected from the custom-made OpenGL-based drone simulator. 
 
-Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house garden** and **skyscrapres**. The technical details will be given in the `Dataset` part. Each model contains respectively training dataset, named `circle`, and test datasets, named `star`. Please refer the original paper for the detailed sampling approach. Data is sampled at different viewpoints above the model and at each viewpoint 4 different kinds of information are collected:
+Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house garden** and **skyscrapres**. The technical details will be given in the `Dataset` part. Each model contains respectively training dataset, named `circle`, and test datasets, named `star`. Please refer the [original paper](https://drive.google.com/file/d/1osWNN6gEZ7sYJxYSgf7CCihI548JsLN9/view?usp=sharing) for the detailed sampling approach. Data is sampled at different viewpoints above the model and at each viewpoint 4 different kinds of information are collected:
 + rgb image, in ros topic `/fireflyvrglasses_for_robots_ros/color_map`, `.png` format with resolution of `480x752`
 + semantic annotation, in ros topic `/firefly/vrglasses_for_robots_ros/semantic_map`, `.png` format with resolution of `480x752`
 + depth information, in ros topic `/firefly/vrglasses_for_robots_ros/depth_map `, `.exr` format with resolution of `480x752`
@@ -88,25 +88,15 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 + **star**:
     * **number of images in each sub-dataset**: 480
 
-## Usage
+## Data Structure
 
-extract data with [`vi_bag_tools`](https://github.com/VIS4ROB-lab/vi_bag_tools)
-
-```sh
-  $ roscore
-  $ cd ~/catkin_ws/
-  $ source ./devel/setup.bash
-  $ bagextractor_asl_format --image-topics /firefly/vrglasses_for_robots_ros/color_map --depth_map_topics /firefly/vrglasses_for_robots_ros/depth_map --semantic-topics /firefly/vrglasses_for_robots_ros/semantic_map --gt_odometry_topics /firefly/vi_sensor/ground_truth/odometry /firefly/vrglasses_for_robots_ros/camera_odometry_out --bag /media/2020-10-27-18-43-43.bag --output-folder /home/lucas/data/output_dir
-```
-
-The extracted data has the following file structure:  
+Each single dataset has the following file structure:  
 ```
 .
-├── ann_dir_1            # annotated semantic maps
-├── image_dir            # rgb images
-├── depth0             
-│   └── data             # depth information
+├── ann_dir_1            # root of annotated semantic maps
+├── image_dir            # root of rgb images
+├── depth0               # root of depth information
 └── gt_odometry0  
-    └── data.csv         # pose information
+    └── data.csv         # recorded pose information
 ```
-In all the `circle` sampled data, there are always 7 or 8 more same images (or pose information) at the beginning. To resist the image lost in the rosbag recording process, we sampled 10 more additional fixed-position images at the beginning. After extraction, 7 or 8 of them will remain. They should be deleted in all the topics before training.
+
