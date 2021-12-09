@@ -15,7 +15,7 @@ Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house 
 ## Citation
 If you find this work useful please cite the paper using the citation below.
 ```
-@inproceedings{roddick2018orthographic,  
+@inproceedings{wang2021viewpointsemantic,  
   title={Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics},  
   author={Wang, Shiming and Maffra, Fabiola and Mascaro, Ruben and Teixeira, Lucas and Chli, Margarita},  
   booktitle = {Proc. of the German Conference on Pattern Recognition (GCPR)},  
