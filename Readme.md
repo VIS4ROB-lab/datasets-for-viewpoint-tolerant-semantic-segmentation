@@ -4,11 +4,24 @@
 
 This Readme.md will introduce the training and test datasets used in the paper "Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics". Please follow this [link](https://drive.google.com/drive/folders/1hCqNp1Ocsfh09h2DIdQ1YbMK59lOrjXe?usp=sharing) to download the zipped datasets. All the datasets are collected from the custom-made Vulkan-based drone simulator. 
 
+
+
 Data is sampled over 5 models: **hospital**, **garden**, **warehouse**, **house garden** and **skyscrapres**. The technical details will be given in the `Dataset` part. Each model contains respectively training dataset, named `circle`, and test datasets, named `star`. Please refer the [original paper](https://drive.google.com/file/d/1osWNN6gEZ7sYJxYSgf7CCihI548JsLN9/view?usp=sharing) for the detailed sampling approach. Data is sampled at different viewpoints above the model and at each viewpoint 4 different kinds of information are collected:
 + rgb image, in ros topic `/fireflyvrglasses_for_robots_ros/color_map`, `.png` format with resolution of `480x752`
 + semantic annotation, in ros topic `/firefly/vrglasses_for_robots_ros/semantic_map`, `.png` format with resolution of `480x752`
 + depth information, in ros topic `/firefly/vrglasses_for_robots_ros/depth_map `, `.exr` format with resolution of `480x752`
 + camera position information, in ros topic `/firefly/vrglasses_for_robots_ros/camera_odometry_out`, `.csv` format, contains timestamp, positions (`x`,`y`,`z`) and orientations (`x`,`y`,`z`, `w`)
+
+## Citation
+If you find this work useful please cite the paper using the citation below.
+```
+@inproceedings{roddick2018orthographic,  
+  title={Viewpoint-tolerant Semamtic Segmentation in Aerial Logistics},  
+  author={Wang, Shiming and Maffra, Fabiola and Mascaro, Ruben and Teixeira, Lucas and Chli, Margarita},  
+  booktitle = {Proc. of the German Conference on Pattern Recognition (GCPR)},  
+  year={2021}  
+}
+```
 
 ## Semantic Class Definition
 | Class       | Palette                                                      |             Color Example             | Description                                                                                                                  |
